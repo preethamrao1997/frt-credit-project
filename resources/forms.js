@@ -6,10 +6,10 @@ async function submitLoanForm() {
         Education: document.getElementById("EduField").value,
         Self_Employed: document.getElementById("EmpField").value,
         Property_Area: document.getElementById("AreaField").value,
-        ApplicantIncome: document.getElementById("Income1Field").value / 500,
-        CoapplicantIncome: document.getElementById("Income2Field").value / 500,
-        LoanAmount: document.getElementById("AmtField").value / 4000,
-        Loan_Amount_Term: document.getElementById("TermField").value * 51.4,
+        ApplicantIncome: document.getElementById("Income1Field").value !== "" ? document.getElementById("Income1Field").value / 500 : "",
+        CoapplicantIncome: document.getElementById("Income2Field").value !== "" ? document.getElementById("Income2Field").value / 500 : "",
+        LoanAmount: document.getElementById("AmtField").value !== "" ? document.getElementById("AmtField").value / 4000 : "",
+        Loan_Amount_Term: document.getElementById("TermField").value !== "" ? document.getElementById("TermField").value * 51.4 : "",
         Credit_History: document.getElementById("HistField").value
     };
 
@@ -102,12 +102,12 @@ async function submitCreditForm() {
         Married: document.getElementById("MarriedField-2").value,
         BankCustomer: document.getElementById("CustField-2").value,
         Employed: document.getElementById("EmpField-2").value,
-        YearsEmployed: document.getElementById("YrsField-2").value / 1.8,
+        YearsEmployed: document.getElementById("YrsField-2").value !== "" ? document.getElementById("YrsField-2").value / 1.8 : "",
         PriorDefault: document.getElementById("DefField-2").value,
         DriversLicense: document.getElementById("DLField-2").value,
         Citizen: document.getElementById("CitField-2").value,
-        Income: document.getElementById("IncomeField-2").value / 700,
-        Debt: document.getElementById("DebtField-2").value / 200000
+        Income: document.getElementById("IncomeField-2").value !== "" ? document.getElementById("IncomeField-2").value / 700 : "",
+        Debt: document.getElementById("DebtField-2").value !== "" ? document.getElementById("DebtField-2").value / 200000 : ""
     };
 
     if (Object.values(formData).some(value => value === null || value === undefined || value === "")) {
