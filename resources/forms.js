@@ -60,14 +60,14 @@ async function submitLoanForm() {
                 document.getElementById('LResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Loan Pass" style="width: 50%;">';
                 document.getElementById('LResultText').classList.add('field-label');
                 document.getElementById('LResultText').classList.add('nav-cta-button-container');
-                document.getElementById('LResultText').innerHTML = 'Success' + '<br><br>' + 'There is a very high chance that your loan will get approved.';
+                document.getElementById('LResultText').innerHTML = 'Success' + '<br><br>' + 'There is a high chance that your loan will get approved.';
             }
             else
             {
                 document.getElementById('LResultImg').innerHTML = '<img src="./resources/fail.svg" alt="Loan Fail" style="width: 50%;">';
                 document.getElementById('LResultText').classList.add('field-label');
                 document.getElementById('LResultText').classList.add('nav-cta-button-container');
-                document.getElementById('LResultText').innerHTML = 'Sorry'+ '<br><br>' + 'There is a very high chance that your loan will not get approved.';
+                document.getElementById('LResultText').innerHTML = 'Sorry'+ '<br><br>' + 'There is a high chance that your loan will not get approved.';
             }
         } else {
             /*console.error('The request failed with status code:', response.status);
@@ -102,12 +102,12 @@ async function submitCreditForm() {
         Married: document.getElementById("MarriedField-2").value,
         BankCustomer: document.getElementById("CustField-2").value,
         Employed: document.getElementById("EmpField-2").value,
-        YearsEmployed: document.getElementById("YrsField-2").value,
+        YearsEmployed: document.getElementById("YrsField-2").value / 1.8,
         PriorDefault: document.getElementById("DefField-2").value,
         DriversLicense: document.getElementById("DLField-2").value,
         Citizen: document.getElementById("CitField-2").value,
-        Income: document.getElementById("IncomeField-2").value,
-        Debt: document.getElementById("DebtField-2").value
+        Income: document.getElementById("IncomeField-2").value / 700,
+        Debt: document.getElementById("DebtField-2").value / 200000
     };
 
     if (Object.values(formData).some(value => value === null || value === undefined || value === "")) {
@@ -158,14 +158,14 @@ async function submitCreditForm() {
                 document.getElementById('CResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Credit Pass" style="width: 50%;">';
                 document.getElementById('CResultText').classList.add('field-label');
                 document.getElementById('CResultText').classList.add('nav-cta-button-container');
-                document.getElementById('CResultText').innerHTML = 'Success' + '<br><br>' + 'There is a very high chance that your credit card will get approved.';
+                document.getElementById('CResultText').innerHTML = 'Success' + '<br><br>' + 'There is a high chance that your credit card will get approved.';
             }
             else
             {
                 document.getElementById('CResultImg').innerHTML = '<img src="./resources/fail.svg" alt="Credit Fail" style="width: 50%;">';
                 document.getElementById('CResultText').classList.add('field-label');
                 document.getElementById('CResultText').classList.add('nav-cta-button-container');
-                document.getElementById('CResultText').innerHTML = 'Sorry'+ '<br><br>' + 'There is a very high chance that your credit card will not get approved.';
+                document.getElementById('CResultText').innerHTML = 'Sorry'+ '<br><br>' + 'There is a high chance that your credit card will not get approved.';
             }
         } else {
             /*console.error('The request failed with status code:', response.status);
