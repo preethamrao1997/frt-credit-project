@@ -41,7 +41,6 @@ async function submitLoanForm() {
         headers: {
             'Accept': '*/*',
             'Content-Type': 'application/json',
-            'Ocp-Apim-Subscription-Key': '569145f2d4204c90b2cc85957c675d6b'
         }
     };
 
@@ -139,7 +138,6 @@ async function submitCreditForm() {
         headers: {
             'Accept': '*/*',
             'Content-Type': 'application/json',
-            'Ocp-Apim-Subscription-Key': '569145f2d4204c90b2cc85957c675d6b'
         }
     };
 
