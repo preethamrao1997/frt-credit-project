@@ -28,7 +28,9 @@ async function submitLoanForm() {
         method: 'POST',
         body: requestBody,
         headers: {
-            'Content-Type': 'application/json'
+            'Accept': '*/*',
+            'Content-Type': 'application/json',
+            'Ocp-Apim-Subscription-Key': '569145f2d4204c90b2cc85957c675d6b'
         }
     };
 
