@@ -1,5 +1,12 @@
 # Credit Card & Loan Approval Predictor
-#### A machine learning based predictor to ease your mind and secure your finances <br>
+#### A machine learning based predictor to ease your mind and secure your finances
+<br>
+
+**Screenshots:**
+<br><br>
+![Screenshot 1](/screenshots/screenshot-1.png?raw=true)
+![Screenshot 2](/screenshots/screenshot-2.png?raw=true)
+![Screenshot 3](/screenshots/screenshot-3.png?raw=true)
 
 **Industry:** Fin Tech
 <br><br>
@@ -20,11 +27,11 @@ This project utilizes Azure Machine Learning services to develop a predictive mo
 - **Real-Time Decision Support:** Users receive instant feedback on their credit card or loan approval likelihood, along with transparent insights into the decision-making process.
 <br><br>
 
-**Core Azure Services:**
+**Core Azure Services Used:**
 - App Service
 - Container Instances
 - API Management
 <br><br>
 
-**Azure AI Service:** Azure Machine Learning
+**Azure AI Service Used:** Azure Machine Learning
   
