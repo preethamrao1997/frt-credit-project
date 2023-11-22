@@ -34,7 +34,7 @@
 
         <link href="./resources/icon32.png" rel="shortcut icon" type="image/x-icon">
         <link href="./resources/icon256.png" rel="apple-touch-icon">
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             window.__WEBFLOW_CURRENCY_SETTINGS = {
                 "currencyCode":"USD",
                 "symbol":"$",
@@ -43,7 +43,7 @@
                 "group":",",
                 "template":"{{wf {\"path\":\"symbol\",\"type\":\"PlainText\"} }} {{wf {\"path\":\"amount\",\"type\":\"CommercePrice\"} }} {{wf {\"path\":\"currencyCode\",\"type\":\"PlainText\"} }}",
                 "hideDecimalForWholeNumbers":false};
-        </script>
+        </script>-->
     </head>
     <body class="body">
         <div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="nav-bar w-nav">
@@ -137,16 +137,16 @@
                             <option value="Rural">Rural</option>
                         </select>
                         
-                        <label for="Income1Field" class="field-label">Applicant's Income</label>
+                        <label for="Income1Field" class="field-label">Applicant's Annual Income</label>
                         <input type="number" class="text-box w-input" maxlength="256" name="Income1Field" data-name="Income1Field" placeholder="Enter applicant's income" id="Income1Field" required="">
                         
-                        <label for="Income2Field" class="field-label">Co-Applicant's Income</label>
+                        <label for="Income2Field" class="field-label">Co-Applicant's Annual Income</label>
                         <input type="number" class="text-box w-input" maxlength="256" name="Income2Field" data-name="Income2Field" placeholder="Enter co-applicant's income" id="Income2Field">
                         
                         <label for="AmtField" class="field-label">Loan Amount</label>
                         <input type="number" class="text-box w-input" maxlength="256" name="AmtField" data-name="AmtField" placeholder="Enter loan amount" id="AmtField" required="">
                         
-                        <label for="TermField" class="field-label">Loan Term (in months)</label>
+                        <label for="TermField" class="field-label">Loan Term (in Years)</label>
                         <input type="number" class="text-box w-input" maxlength="256" name="TermField" data-name="TermField" placeholder="Enter loan term" id="TermField" required="">
                         
                         <label for="HistField" class="field-label">Previous Credit History</label>
