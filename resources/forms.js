@@ -22,16 +22,13 @@ async function submitLoanForm() {
         },
     });
 
-    const url = "https://api-mgmnt.azure-api.net/loan-api/score";
-    const apiKey = "yZcMqTUwVY6d9JtXF8e7Lp1YjYNzHXET";
+    const url = "https://api-mgmnt.azure-api.net/loan/score";
 
     const options = {
         method: 'POST',
         body: requestBody,
         headers: {
-            'Accept': '*/*',
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
         }
     };
 
