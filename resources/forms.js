@@ -153,7 +153,7 @@ async function submitCreditForm() {
             document.getElementById('CreditResult').style="display: flex";
             document.getElementById('CreditResult').style.marginTop = '10px';
             document.getElementById('CreditResult').style.padding = '10px';
-            if (result.Results[0] === true)
+            if (result.Results[0] === 1)
             {
                 document.getElementById('CResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Credit Pass" style="width: 50%;">';
                 document.getElementById('CResultText').classList.add('field-label');
