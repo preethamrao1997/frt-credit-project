@@ -28,6 +28,7 @@ async function submitLoanForm() {
         method: 'POST',
         body: requestBody,
         headers: {
+            'Accept': '*/*',
             'Content-Type': 'application/json'
         }
     };
