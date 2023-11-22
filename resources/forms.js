@@ -47,14 +47,14 @@ async function submitLoanForm() {
             if (result.Results[0] === true)
             {
                 document.getElementById('LResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Loan Pass" style="width: 50%;">';
-                document.getElementById('LResultImg').classList.add('nav-cta-button-container');
-                document.getElementById('LoanResult').innerHTML = 'There is a very high chance that your loan will get approved.';
+                document.getElementById('LResultText').classList.add('nav-cta-button-container');
+                document.getElementById('LResultText').innerHTML = 'There is a very high chance that your loan will get approved.';
             }
             else
             {
                 document.getElementById('LResultImg').innerHTML = '<img src="./resources/fail.svg" alt="Loan Fail" style="width: 50%;">';
-                document.getElementById('LResultImg').classList.add('nav-cta-button-container');
-                document.getElementById('LoanResult').innerHTML = 'Sorry, there is a very high chance that your loan will not get approved.';
+                document.getElementById('LResultText').classList.add('nav-cta-button-container');
+                document.getElementById('LResultText').innerHTML = 'Sorry, there is a very high chance that your loan will not get approved.';
             }
         } else {
             console.error('The request failed with status code:', response.status);
@@ -67,7 +67,7 @@ async function submitLoanForm() {
             document.getElementById('LoanResult').style.padding = '10px';
             document.getElementById('LResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
             document.getElementById('LResultText').classList.add('nav-cta-button-container');
-            document.getElementById('LResultText').innerHTML = error.message + 'Please try again.';
+            document.getElementById('LResultText').innerHTML = error.message + '<br><br>' + 'Please try again.';
         }
     } catch (error) {
         console.error('Error:', error.message);
@@ -77,7 +77,7 @@ async function submitLoanForm() {
         document.getElementById('LoanResult').style.padding = '10px';
         document.getElementById('LResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
         document.getElementById('LResultText').classList.add('nav-cta-button-container');
-        document.getElementById('LResultText').innerHTML = error.message + 'Please try again.';
+        document.getElementById('LResultText').innerHTML = error.message + '<br><br>' + 'Please try again.';
     }
 }
 
