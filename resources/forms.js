@@ -1,24 +1,24 @@
 async function submitLoanForm() {
     var formData = {
-        Gender: document.getElementById("GenderField").value,
-        Married: document.getElementById("MarriedField").value,
-        Dependents: document.getElementById("DepdField").value,
-        Education: document.getElementById("EduField").value,
-        Self_Employed: document.getElementById("EmpField").value,
-        Property_Area: document.getElementById("AreaField").value,
-        ApplicantIncome: document.getElementById("Income1Field").value,
-        CoapplicantIncome: document.getElementById("Income2Field").value,
-        LoanAmount: document.getElementById("AmtField").value,
-        Loan_Amount_Term: document.getElementById("TermField").value,
-        Credit_History: document.getElementById("HistField").value,
+        "Gender": document.getElementById("GenderField").value,
+        "Married": document.getElementById("MarriedField").value,
+        "Dependents": document.getElementById("DepdField").value,
+        "Education": document.getElementById("EduField").value,
+        "Self_Employed": document.getElementById("EmpField").value,
+        "Property_Area": document.getElementById("AreaField").value,
+        "ApplicantIncome": document.getElementById("Income1Field").value,
+        "CoapplicantIncome": document.getElementById("Income2Field").value,
+        "LoanAmount": document.getElementById("AmtField").value,
+        "Loan_Amount_Term": document.getElementById("TermField").value,
+        "Credit_History": document.getElementById("HistField").value,
     };
 
     const requestBody = JSON.stringify({
         Inputs: {
-            data: [formData],
+            "data": [formData],
         },
         GlobalParameters: {
-            method: "predict",
+            "method": "predict",
         },
     });
 
