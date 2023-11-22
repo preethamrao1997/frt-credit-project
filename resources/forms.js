@@ -20,6 +20,7 @@ async function submitLoanForm() {
         document.getElementById('LResultImg').innerHTML = '<img src="./resources/warning.svg" alt="Value Warning" style="width: 50%;">';
         document.getElementById('LResultText').classList.add('nav-cta-button-container');
         document.getElementById('LResultText').innerHTML = "One or more values haven't been entered correctly." + '<br><br>' + 'Please try again.';
+        return;
     }
 
     const requestBody = JSON.stringify({
@@ -111,6 +112,7 @@ async function submitCreditForm() {
         document.getElementById('CResultImg').innerHTML = '<img src="./resources/warning.svg" alt="Value Warning" style="width: 50%;">';
         document.getElementById('CResultText').classList.add('nav-cta-button-container');
         document.getElementById('CResultText').innerHTML = "One or more values haven't been entered correctly." + '<br><br>' + 'Please try again.';
+        return;
     }
 
     const requestBody = JSON.stringify({
