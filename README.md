@@ -17,12 +17,15 @@ This is an opportunity to use a machine learning model to automate and enhance t
 **Project Description:**<br>
 The core idea of this project is to use machine learning and Azure services to automate and enhance the credit card and loan approval process. The project aims to address the challenges faced by financial institutions in streamlining decision-making, reducing delays, improving efficiency, and ensuring unbiased credit evaluations.
 <br><br>
-This project utilizes Azure Machine Learning services to develop a predictive model capable of assessing credit risk based on historical data. The model considers various factors, including income and other relevant features. By deploying this model as a web service, the project creates a user-friendly web application. This application allows users to input their information, receive real-time predictions, and understand the factors influencing the credit decision.
+This project utilizes Azure Machine Learning services for it's predictive model capable of assessing credit risk based on historical data. The model considers various factors, including income, marital status, employment and other relevant features.
 <br><br>
+By using this model, a static web app was made to present a user-friendly interface. This application allows users to input their information, receive real-time predictions, and understand the factors influencing the credit decision.
+<br><br>
+The API Management Resource was used to access the model's endpoint without any CORS issues.
 
 **Features:**
 - **Web-Based Interface:** A user-friendly web interface allows individuals to input their details for credit evaluation.
-- **Azure Machine Learning Integration:** The project leverages Azure Machine Learning for model development, training, and deployment.
+- **Azure Machine Learning Integration:** The project leverages Azure Machine Learning for model development, training, and deployment using the REST api.
 - **Predictive Model:** A machine learning model is trained on historical data to predict creditworthiness based on various factors.
 - **Real-Time Decision Support:** Users receive instant feedback on their credit card or loan approval likelihood, along with transparent insights into the decision-making process.
 <br><br>
