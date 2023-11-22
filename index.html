@@ -109,6 +109,7 @@
                         <label for="DepdField" class="field-label">Number of Dependents</label>
                         <select id="DepdField" name="DepdField" data-name="DepdField" required="" class="select-field w-select">
                             <option value="" selected="selected">Select one...</option>
+                            <option value="0">Zero</option>
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three or more</option>
@@ -161,12 +162,9 @@
                     </form>
                     <div>
                         <br>
-                        <div id="LoanSuccess" tabindex="-1" role="region" aria-label="Loan Form Success">
-                            
-                        </div>
-                        <div id="LoanError" tabindex="-1" role="region" aria-label="Loan Form Error">
-                            <div id="LErrorImg" style="flex: 0 0 200px"></div>
-                            <div id="LErrorText" style="flex: 1"></div>
+                        <div id="LoanResult" tabindex="-1" role="region" aria-label="Loan Form Result">
+                            <div id="LResultImg" style="flex: 0 0 200px"></div>
+                            <div id="LResultText" style="flex: 1"></div>
                         </div>
 
                     </div>
@@ -252,12 +250,9 @@
                     </form>
                     <div>
                         <br>
-                        <div id="CreditSuccess" tabindex="-1" role="region" aria-label="Credit Form Success">
-                            
-                        </div>
-                        <div id="CreditError" tabindex="-1" role="region" aria-label="Credit Form Error">
-                            <div id="CErrorImg" style="flex: 0 0 200px"></div>
-                            <div id="CErrorText" style="flex: 1"></div>
+                        <div id="CreditResult" tabindex="-1" role="region" aria-label="Credit Form Result">
+                            <div id="CResultImg" style="flex: 0 0 200px"></div>
+                            <div id="CResultText" style="flex: 1"></div>
                         </div>
                     
                     </div>
