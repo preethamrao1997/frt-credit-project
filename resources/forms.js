@@ -18,6 +18,7 @@ async function submitLoanForm() {
         document.getElementById('LoanResult').style.marginTop = '10px';
         document.getElementById('LoanResult').style.padding = '10px';
         document.getElementById('LResultImg').innerHTML = '<img src="./resources/warning.svg" alt="Value Warning" style="width: 50%;">';
+        document.getElementById('LResultText').classList.add('field-label');
         document.getElementById('LResultText').classList.add('nav-cta-button-container');
         document.getElementById('LResultText').innerHTML = "One or more values haven't been entered correctly." + '<br><br>' + 'Please try again.';
         return;
@@ -57,12 +58,14 @@ async function submitLoanForm() {
             if (result.Results[0] === true)
             {
                 document.getElementById('LResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Loan Pass" style="width: 50%;">';
+                document.getElementById('LResultText').classList.add('field-label');
                 document.getElementById('LResultText').classList.add('nav-cta-button-container');
                 document.getElementById('LResultText').innerHTML = 'Success' + '<br><br>' + 'There is a very high chance that your loan will get approved.';
             }
             else
             {
                 document.getElementById('LResultImg').innerHTML = '<img src="./resources/fail.svg" alt="Loan Fail" style="width: 50%;">';
+                document.getElementById('LResultText').classList.add('field-label');
                 document.getElementById('LResultText').classList.add('nav-cta-button-container');
                 document.getElementById('LResultText').innerHTML = 'Sorry'+ '<br><br>' + 'There is a very high chance that your loan will not get approved.';
             }
@@ -75,6 +78,7 @@ async function submitLoanForm() {
             document.getElementById('LoanResult').style.marginTop = '10px';
             document.getElementById('LoanResult').style.padding = '10px';
             document.getElementById('LResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
+            document.getElementById('LResultText').classList.add('field-label');
             document.getElementById('LResultText').classList.add('nav-cta-button-container');
             document.getElementById('LResultText').innerHTML = error.message + '<br><br>' + 'Please try again.';
         }
@@ -85,6 +89,7 @@ async function submitLoanForm() {
         document.getElementById('LoanResult').style.marginTop = '10px';
         document.getElementById('LoanResult').style.padding = '10px';
         document.getElementById('LResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
+        document.getElementById('LResultText').classList.add('field-label');
         document.getElementById('LResultText').classList.add('nav-cta-button-container');
         document.getElementById('LResultText').innerHTML = error.message + '<br><br>' + 'Please try again.';
     }
@@ -110,6 +115,7 @@ async function submitCreditForm() {
         document.getElementById('CreditResult').style.marginTop = '10px';
         document.getElementById('CreditResult').style.padding = '10px';
         document.getElementById('CResultImg').innerHTML = '<img src="./resources/warning.svg" alt="Value Warning" style="width: 50%;">';
+        document.getElementById('CResultText').classList.add('field-label');
         document.getElementById('CResultText').classList.add('nav-cta-button-container');
         document.getElementById('CResultText').innerHTML = "One or more values haven't been entered correctly." + '<br><br>' + 'Please try again.';
         return;
@@ -150,12 +156,14 @@ async function submitCreditForm() {
             if (result.Results[0] === true)
             {
                 document.getElementById('CResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Credit Pass" style="width: 50%;">';
+                document.getElementById('CResultText').classList.add('field-label');
                 document.getElementById('CResultText').classList.add('nav-cta-button-container');
                 document.getElementById('CResultText').innerHTML = 'Success' + '<br><br>' + 'There is a very high chance that your credit card will get approved.';
             }
             else
             {
                 document.getElementById('CResultImg').innerHTML = '<img src="./resources/fail.svg" alt="Credit Fail" style="width: 50%;">';
+                document.getElementById('CResultText').classList.add('field-label');
                 document.getElementById('CResultText').classList.add('nav-cta-button-container');
                 document.getElementById('CResultText').innerHTML = 'Sorry'+ '<br><br>' + 'There is a very high chance that your credit card will not get approved.';
             }
@@ -168,6 +176,7 @@ async function submitCreditForm() {
             document.getElementById('CreditResult').style.marginTop = '10px';
             document.getElementById('CreditResult').style.padding = '10px';
             document.getElementById('CResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
+            document.getElementById('CResultText').classList.add('field-label');
             document.getElementById('CResultText').classList.add('nav-cta-button-container');
             document.getElementById('CResultText').innerHTML = error.message + '<br><br>' + 'Please try again.';
         }
@@ -178,6 +187,7 @@ async function submitCreditForm() {
         document.getElementById('CreditResult').style.marginTop = '10px';
         document.getElementById('CreditResult').style.padding = '10px';
         document.getElementById('CResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
+        document.getElementById('CResultText').classList.add('field-label');
         document.getElementById('CResultText').classList.add('nav-cta-button-container');
         document.getElementById('CResultText').innerHTML = error.message + '<br><br>' + 'Please try again.';
     }
