@@ -10,16 +10,16 @@ async function submitLoanForm() {
         "CoapplicantIncome": document.getElementById("Income2Field").value,
         "LoanAmount": document.getElementById("AmtField").value,
         "Loan_Amount_Term": document.getElementById("TermField").value,
-        "Credit_History": document.getElementById("HistField").value,
+        "Credit_History": document.getElementById("HistField").value
     };
 
     const requestBody = JSON.stringify({
-        Inputs: {
-            "data": [formData],
+        "Inputs": {
+            "data": [formData]
         },
-        GlobalParameters: {
-            "method": "predict",
-        },
+        "GlobalParameters": {
+            "method": "predict"
+        }
     });
 
     const url = "https://api-mgmnt.azure-api.net/loan/score";
