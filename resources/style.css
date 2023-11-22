@@ -2652,7 +2652,7 @@ figcaption {
 }
 
 .text-box {
-  background-color: #f3f3f3;
+  /*background-color: #f3f3f3;*/
   border-radius: 12px;
   position: relative;
 }

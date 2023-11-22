@@ -6,10 +6,10 @@ async function submitLoanForm() {
         Education: document.getElementById("EduField").value,
         Self_Employed: document.getElementById("EmpField").value,
         Property_Area: document.getElementById("AreaField").value,
-        ApplicantIncome: document.getElementById("Income1Field").value,
-        CoapplicantIncome: document.getElementById("Income2Field").value,
-        LoanAmount: document.getElementById("AmtField").value,
-        Loan_Amount_Term: document.getElementById("TermField").value,
+        ApplicantIncome: document.getElementById("Income1Field").value / 500,
+        CoapplicantIncome: document.getElementById("Income2Field").value / 500,
+        LoanAmount: document.getElementById("AmtField").value / 4000,
+        Loan_Amount_Term: document.getElementById("TermField").value * 51.4,
         Credit_History: document.getElementById("HistField").value
     };
 
