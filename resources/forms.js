@@ -41,37 +41,43 @@ async function submitLoanForm() {
             const result = await response.json();
             console.log('Result:', result);
 
-            //document.getElementById('LoanSuccess').style="display: flex";
-            document.getElementById('LoanSuccess').style.marginTop = '10px';
-            document.getElementById('LoanSuccess').style.padding = '10px';
-            //document.getElementById('LFailImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
-            //document.getElementById('LFailText').classList.add('nav-cta-button-container');
-            //document.getElementById('LFailText').innerHTML = error.message + '<br>' + 'Please try again.';
-            document.getElementById('LoanSuccess').innerHTML = 'API Response: ' + JSON.stringify(result);
+            document.getElementById('LoanResult').style="display: flex";
+            document.getElementById('LoanResult').style.marginTop = '10px';
+            document.getElementById('LoanResult').style.padding = '10px';
+            if (result["Results"]==true)
+            {
+                document.getElementById('LResultImg').innerHTML = '<img src="./resources/pass.svg" alt="Loan Pass" style="width: 50%;">';
+                document.getElementById('LResultImg').classList.add('nav-cta-button-container');
+                document.getElementById('LoanResult').innerHTML = 'API Response: ' + JSON.stringify(result);
+            }
+            else
+            {
+                document.getElementById('LResultImg').innerHTML = '<img src="./resources/fail.svg" alt="Loan Fail" style="width: 50%;">';
+                document.getElementById('LResultImg').classList.add('nav-cta-button-container');
+                document.getElementById('LoanResult').innerHTML = 'API Response: ' + JSON.stringify(result);
+            }
         } else {
             console.error('The request failed with status code:', response.status);
-
-            console.log('Headers:', response.headers);
 
             const responseContent = await response.text();
             console.error('Response Content:', responseContent);
 
-            document.getElementById('LoanError').style="display: flex";
-            document.getElementById('LoanError').style.marginTop = '10px';
-            document.getElementById('LoanError').style.padding = '10px';
-            document.getElementById('LErrorImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
-            document.getElementById('LErrorText').classList.add('nav-cta-button-container');
-            document.getElementById('LErrorText').innerHTML = error.message + '<br>' + 'Please try again.';
+            document.getElementById('LoanResult').style="display: flex";
+            document.getElementById('LoanResult').style.marginTop = '10px';
+            document.getElementById('LoanResult').style.padding = '10px';
+            document.getElementById('LResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
+            document.getElementById('LResultText').classList.add('nav-cta-button-container');
+            document.getElementById('LResultText').innerHTML = error.message + '<br>' + 'Please try again.';
         }
     } catch (error) {
         console.error('Error:', error.message);
 
-        document.getElementById('LoanError').style="display: flex";
-        document.getElementById('LoanError').style.marginTop = '10px';
-        document.getElementById('LoanError').style.padding = '10px';
-        document.getElementById('LErrorImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
-        document.getElementById('LErrorText').classList.add('nav-cta-button-container');
-        document.getElementById('LErrorText').innerHTML = error.message + '<br>' + 'Please try again.';
+        document.getElementById('LoanResult').style="display: flex";
+        document.getElementById('LoanResult').style.marginTop = '10px';
+        document.getElementById('LoanResult').style.padding = '10px';
+        document.getElementById('LResultImg').innerHTML = '<img src="./resources/error.svg" alt="API Error" style="width: 50%;">';
+        document.getElementById('LResultText').classList.add('nav-cta-button-container');
+        document.getElementById('LResultText').innerHTML = error.message + '<br>' + 'Please try again.';
     }
 }
 
