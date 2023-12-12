@@ -21,14 +21,6 @@ This project utilizes Azure Machine Learning services for it's predictive model 
 <br><br>
 By using this model, a static web app was made to present a user-friendly interface. This application allows users to input their information, receive real-time predictions, and understand the factors influencing the credit decision.
 <br><br>
-The API Management Resource was used to access the model's endpoint without any CORS issues.
-
-**Features:**
-- **Web-Based Interface:** A user-friendly web interface allows individuals to input their details for credit evaluation.
-- **Azure Machine Learning Integration:** The project leverages Azure Machine Learning for model development, training, and deployment using the REST api.
-- **Predictive Model:** A machine learning model is trained on historical data to predict creditworthiness based on various factors.
-- **Real-Time Decision Support:** Users receive instant feedback on their credit card or loan approval likelihood, along with transparent insights into the decision-making process.
-<br><br>
 
 **Core Azure Services Used:**
 - App Service
@@ -37,4 +29,17 @@ The API Management Resource was used to access the model's endpoint without any 
 <br><br>
 
 **Azure AI Service Used:** Azure Machine Learning
+
+**Details:**
+- Loan and Credit Card apporval datasets were obtained from Kaggle to train 2 ML models (one for loan approval and another for credit card approval).
+- Automated ML was used inside Azure Machine Learning service to train a Classification model to find out who would get approved for a loan & credit card and who wouldn't.
+- The best models (VotingEnsemble) were then deployed as 2 Container instances. This is how Azure Container Instances were used.
+- A webpage was made using HTML and CSS (as seen in the screenshots).
+- This webpage was then put on this GitHub project and deployed as a web app using Static Web App service on Azure.
+- When the Sumbit button is clicked on the forms, a Javascript function makes an API call to the ML models.
+- But this was causing a Cross-Origin Request Blocked (CORS) error, which was preventing me from getting the results.
+- Upon finding another user having the same issue, API Management service was used where a CORS policy was added to prevent this error from ocurring.
+- Thus the project was done using the above mentioned resources.
+<br><br>
+- The project demo video also has the Azure resources explained, if needed.
   
